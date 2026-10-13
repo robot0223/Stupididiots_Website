@@ -89,4 +89,167 @@ html{scroll-behavior:auto}body{margin:0;overflow-x:hidden}
 .hub-section .hub-bodytext,.hub-section .hub-work-summary,.hub-section .hub-work-sub,.hub-section .hub-disclaimer,.hub-section .hub-principle-copy,.hub-section .hub-collab-introtext,.hub-section .hub-empty-copy,.hub-section .hub-log-note{color:#455575}
 .hub-section .hub-eyebrow,.hub-section .hub-principle,.hub-section .hub-collab-panel,.hub-section .hub-log-panel,.hub-section .hub-work-meta{border-color:#a1b0d1}
 .hub-section .hub-cta{color:#111b4d;border-color:#896dd0}
+</style></div><div class="w-embed"><style>
+/* Responsive pass 2026-10-14: all changes are isolated in this embed for easy rollback.
+   Arctic Lavender / Minimal Nebula Home. No JS, smooth scrolling, parallax, or animation loops. */
+html{scroll-behavior:auto}
+body{max-width:100%;overflow-x:clip}
+.h06-site,.h06-hero,.hub-section,.hub-footer{max-width:100%}
+.h06-site *,.hub-section *,.hub-footer *{min-width:0}
+.h06-hero{min-height:100vh;min-height:100svh;height:auto;overflow-x:clip}
+.h06-core{width:100%;min-width:0}
+.h06-title-zone,.h06-center{min-width:0}
+.h06-h1{max-width:100%;line-height:.88;overflow-wrap:normal}
+.h06-descriptor{max-width:min(550px,90vw);text-wrap:pretty}
+.h06-down,.h06-plus{flex-shrink:0}
+.h06-brand{white-space:nowrap}
+.h06-links{flex-wrap:wrap}
+.h06-orbit,.h06-aurora,.h06-mist,.h06-mark{pointer-events:none}
+.hub-section :is(h2,h3,p),.hub-footer :is(h2,p){max-width:100%;overflow-wrap:break-word}
+.hub-work-grid,.hub-manifesto,.hub-profile-panel,.hub-collab-panel,.hub-log-panel,.hub-intro-grid{min-width:0}
+.hub-work-card,.hub-profile-feature,.hub-profile-side{min-width:0}
+.hub-work-art{contain:layout paint}
+.hub-footer-bottom{flex-wrap:wrap}
+.h06-link:focus-visible,.h06-brand:focus-visible,.h06-plus:focus-visible,.h06-down:focus-visible,.hub-cta:focus-visible,.hub-footer-link:focus-visible{outline:2px solid #896dd0;outline-offset:4px}
+.hub-cta,.hub-footer-link{min-height:44px;display:inline-flex;align-items:center}
+@media(min-width:1600px){
+  .h06-core{max-width:1800px;margin-left:auto;margin-right:auto}
+  .h06-nav,.h06-footerline{padding-left:max(5.2vw,calc((100% - 1840px)/2));padding-right:max(5.2vw,calc((100% - 1840px)/2))}
+  .h06-h1{font-size:clamp(170px,11.2vw,228px)}
+  .hub-section{padding-left:max(5vw,calc((100vw - 1720px)/2));padding-right:max(5vw,calc((100vw - 1720px)/2))}
+  .hub-footer{padding-left:max(5vw,calc((100vw - 1720px)/2));padding-right:max(5vw,calc((100vw - 1720px)/2))}
+}
+@media(max-width:1199px){
+  .h06-title-zone{grid-template-columns:70px minmax(0,1fr) 70px;gap:14px}
+  .h06-h1{font-size:clamp(84px,12vw,155px);line-height:.89}
+  .h06-left-rail,.h06-right-rail{font-size:10px}
+  .hub-work-art{padding:20px}
+  .hub-work-art-strong{font-size:clamp(48px,6.5vw,92px);overflow-wrap:normal}
+  .hub-section{padding-top:64px;padding-bottom:90px}
+}
+@media(max-width:1024px){
+  .h06-title-zone{grid-template-columns:minmax(0,1fr);max-width:100%;gap:0}
+  .h06-left-rail,.h06-right-rail{display:none}
+  .h06-center{width:100%}
+  .h06-h1{font-size:clamp(80px,12.2vw,145px)}
+  .h06-descriptor{margin-top:34px}
+  .h06-orbit{left:10%;width:80%;top:26%;height:46%;opacity:.34}
+  .h06-nav{gap:17px}
+  .h06-links{gap:16px}
+  .hub-intro-grid,.hub-collab-intro,.hub-vision-closer{grid-template-columns:minmax(0,1fr);gap:28px}
+  .hub-profile-panel{margin-top:48px;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+  .hub-work-grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:18px;row-gap:46px}
+  .hub-work-card:last-child{grid-column:auto;max-width:none}
+  .hub-work-art-strong{font-size:clamp(55px,8vw,95px)}
+  .hub-manifesto{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px;row-gap:44px}
+  .hub-collab-panel{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:24px}
+  .hub-log-panel{grid-template-columns:minmax(0,1fr);gap:24px}
+  .hub-footer-head{font-size:clamp(60px,9.4vw,106px)}
+}
+@media(max-width:767px){
+  .h06-nav{padding:22px 24px 12px;flex-wrap:wrap;gap:10px}
+  .h06-brand{font-size:22px;line-height:1.2}
+  .h06-plus{height:44px;width:44px}
+  .h06-links{order:3;width:100%;display:flex;flex-wrap:nowrap;gap:4px;justify-content:space-between;border-top:1px solid rgba(17,27,77,.2);padding-top:8px}
+  .h06-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 6px;font-size:11px;line-height:1.2;letter-spacing:.025em}
+  .h06-core{padding:26px 18px 34px;justify-content:center}
+  .h06-topnote{font-size:10px;line-height:1.6;letter-spacing:.07em}
+  .h06-title-zone{margin-top:26px}
+  .h06-id{font-size:9px;letter-spacing:.11em;margin-bottom:20px}
+  .h06-h1{font-size:clamp(68px,15.4vw,118px);line-height:.91;letter-spacing:-.095em}
+  .h06-descriptor{max-width:450px;margin-top:30px;font-size:12px;letter-spacing:.055em;line-height:1.65}
+  .h06-down{width:58px;height:58px;margin-top:29px;font-size:30px}
+  .h06-footerline{padding:12px 24px 23px;font-size:9px;line-height:1.4;letter-spacing:.07em}
+  .h06-orbit{left:1%;top:29%;width:98%;height:36%;transform:rotate(-14deg)}
+  .h06-mark{display:none}
+  .hub-section{padding:52px 24px 76px}
+  .hub-eyebrow{font-size:10px;letter-spacing:.07em;flex-wrap:wrap;gap:8px}
+  .hub-heading,.hub-people-title,.hub-collab-head,.hub-vision-head,.hub-log-title{font-size:clamp(43px,10vw,75px)!important;line-height:1!important;letter-spacing:-.065em!important}
+  .hub-intro-grid{grid-template-columns:minmax(0,1fr);margin-top:48px;gap:30px}
+  .hub-people-title{margin-bottom:4px}
+  .hub-profile-panel{grid-template-columns:minmax(0,1fr);margin-top:42px;gap:16px}
+  .hub-profile-feature,.hub-profile-side{min-height:0;padding:28px;gap:28px}
+  .hub-feature-type{font-size:clamp(45px,10vw,68px);line-height:1.02}
+  .hub-work-intro{display:block;margin-bottom:34px}
+  .hub-work .hub-heading{margin-top:52px;margin-bottom:22px}
+  .hub-work-sub{max-width:480px;text-align:left}
+  .hub-work-grid{grid-template-columns:minmax(0,1fr);row-gap:48px}
+  .hub-work-card:last-child{grid-column:auto;max-width:none}
+  .hub-work-art{aspect-ratio:1.5;min-height:0}
+  .hub-work-art-strong{font-size:clamp(52px,14vw,100px)}
+  .hub-work-meta{flex-wrap:wrap;gap:8px;line-height:1.5}
+  .hub-manifesto{grid-template-columns:minmax(0,1fr);row-gap:34px}
+  .hub-vision-head{margin-top:56px;margin-bottom:54px}
+  .hub-vision-closer{grid-template-columns:minmax(0,1fr);margin-top:56px;gap:19px}
+  .hub-collab-intro{grid-template-columns:minmax(0,1fr);gap:18px}
+  .hub-collab-panel{grid-template-columns:minmax(0,1fr);gap:14px;padding:24px 0}
+  .hub-collab-symbol{min-height:110px}
+  .hub-log-panel{grid-template-columns:minmax(0,1fr);padding:28px 0;gap:22px}
+  .hub-log-types{flex-wrap:wrap;gap:9px}
+  .hub-footer{padding:46px 24px 28px}
+  .hub-footer-head{font-size:clamp(48px,10.8vw,82px);line-height:1;letter-spacing:-.068em;margin:70px 0 80px}
+  .hub-footer-top,.hub-footer-bottom{gap:13px;flex-wrap:wrap;font-size:10px;line-height:1.6}
+}
+@media(max-width:600px){
+  /* Smaller downloads and fewer expensive paint operations on phones. */
+  .h06-mist{background-image:none!important;opacity:0!important;filter:none!important;mix-blend-mode:normal}
+  .h06-aurora{filter:none!important;background:radial-gradient(ellipse 80% 42% at 74% 40%,rgba(167,140,242,.38),transparent 78%),radial-gradient(ellipse 75% 36% at 12% 72%,rgba(151,174,244,.3),transparent 80%),linear-gradient(120deg,#eef8fc,#f3efff)}
+  .h06-orbit{opacity:.35}
+  .hub-work-card:hover .hub-work-art,.hub-profile-feature:hover,.hub-profile-side:hover{transform:none}
+}
+@media(max-width:479px){
+  .h06-nav{padding:17px 18px 9px;gap:10px}
+  .h06-brand{font-size:20px}
+  .h06-core{padding:17px 14px 26px}
+  .h06-id{margin-bottom:18px}
+  .h06-title-zone{margin-top:18px}
+  .h06-h1{font-size:clamp(66px,16vw,79px);line-height:.94;letter-spacing:-.098em}
+  .h06-descriptor{max-width:330px;font-size:11px;letter-spacing:.035em;line-height:1.7;margin-top:25px}
+  .h06-down{width:54px;height:54px;margin-top:23px}
+  .h06-footerline{padding:10px 18px 18px;font-size:9px}
+  .h06-footerline span:last-child{display:none}
+  .hub-section{padding:42px 18px 68px}
+  .hub-eyebrow{font-size:9px;line-height:1.5}
+  .hub-heading,.hub-people-title,.hub-collab-head,.hub-vision-head,.hub-log-title{font-size:clamp(37px,10.4vw,51px)!important;line-height:1.05!important;letter-spacing:-.063em!important}
+  .hub-profile-feature,.hub-profile-side{padding:22px;gap:28px}
+  .hub-feature-type{font-size:clamp(39px,11vw,55px)}
+  .hub-side-title{font-size:clamp(24px,7vw,35px)}
+  .hub-work-art{padding:18px;aspect-ratio:1.35}
+  .hub-work-art-strong{font-size:clamp(49px,14vw,69px)}
+  .hub-work-name{font-size:24px}
+  .hub-principle-title{font-size:28px}
+  .hub-vision-head{margin-top:43px;margin-bottom:43px}
+  .hub-footer{padding:40px 18px 20px}
+  .hub-footer-head{font-size:clamp(43px,11.1vw,58px);margin:65px 0 70px}
+  .hub-footer-top,.hub-footer-bottom{font-size:9px}
+}
+@media(max-width:360px){
+  .h06-nav{padding-left:14px;padding-right:14px}
+  .h06-brand{font-size:18px}
+  .h06-links{gap:0}
+  .h06-link{padding:0 3px;font-size:10px}
+  .h06-h1{font-size:clamp(59px,18vw,65px)}
+  .h06-descriptor{font-size:10px}
+  .h06-footerline{padding-left:14px}
+  .hub-section,.hub-footer{padding-left:16px;padding-right:16px}
+  .hub-heading,.hub-people-title,.hub-collab-head,.hub-vision-head,.hub-log-title{font-size:clamp(35px,10.6vw,39px)!important}
+  .hub-footer-head{font-size:clamp(40px,11.2vw,46px)}
+}
+@media(max-height:650px) and (min-width:700px){
+  .h06-nav{padding-top:16px;padding-bottom:10px}
+  .h06-core{padding-top:8px;padding-bottom:12px}
+  .h06-topnote{font-size:9px}
+  .h06-h1{font-size:clamp(80px,10vh,140px);line-height:.9}
+  .h06-descriptor{margin-top:18px}
+  .h06-down{margin-top:18px;width:48px;height:48px;font-size:25px}
+  .h06-footerline{padding-top:8px;padding-bottom:12px}
+}
+@media(hover:none){
+  .hub-profile-feature,.hub-profile-side,.hub-work-art{transition:none}
+  .hub-work-card:hover .hub-work-art,.hub-profile-feature:hover,.hub-profile-side:hover{transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .h06-site *,.hub-section *,.hub-footer *{animation:none!important;transition:none!important}
+}
 </style></div><div class="h06-site"><section id="top" class="h06-hero"><div class="h06-aurora"></div><div class="h06-mist"></div><div class="h06-orbit"></div><div class="h06-mark h06-mark-left">+</div><div class="h06-mark h06-mark-right">+</div><header class="h06-nav"><a href="#top" class="h06-brand">STUPID IDIOTS.</a><nav aria-label="Main navigation" class="h06-links"><a href="#people" class="h06-link">PEOPLE</a><a href="#work" class="h06-link">PROJECTS</a><a href="#vision" class="h06-link">VISION</a><a href="#log" class="h06-link">LOG</a></nav><a href="#people" aria-label="Meet the people" class="h06-plus">+</a></header><div class="h06-core"><div class="h06-topnote">AN INDEPENDENT COLLECTIVE<br/>ONE VOICE. DIFFERENT MINDS.</div><div class="h06-title-zone"><div class="h06-left-rail"><span>CURIOSITY</span><span>IDEAS</span><span>PEOPLE</span></div><div class="h06-center"><span class="h06-id">STUPID IDIOTS   —   THE COLLECTIVE</span><h1 class="h06-h1">STUPID<br/><span class="h06-purple">IDIOTS.</span></h1><p class="h06-descriptor">A COLLECTIVE WITH A SHARED VISION, AND ROOM FOR EVERYONE TO PURSUE THEIR OWN PATH.</p></div><div class="h06-right-rail"><span>EXPERIMENTS</span><span>FREEDOM</span><span>AND BEYOND</span></div></div><a href="#people" aria-label="Scroll to the People section" class="h06-down">↓</a></div><div class="h06-footerline"><span>CONNECTED BY CURIOSITY</span><span>BUILT FOR WHAT&#x27;S NEXT</span></div></section></div><section id="people" class="hub-section hub-people"><div class="hub-eyebrow"><span>01 / THE PEOPLE</span><span>INDIVIDUALS FIRST</span></div><div class="hub-intro-grid"><h2 class="hub-people-title">NO TWO<br/>ALIKE.</h2><div><p class="hub-lead">Not a team of copies. Not one shared ambition.</p><p class="hub-bodytext">We&#x27;re a small collective of people doing different things for different reasons. Each person keeps their own interests, ideas and identity. Stupid Idiots is where those paths meet—not where they become the same.</p></div></div><div class="hub-profile-panel"><div class="hub-profile-feature"><span class="hub-feature-number">A DIRECTORY OF INDIVIDUAL MINDS / 001</span><div class="hub-feature-type">PEOPLE<br/>BEFORE<br/>PROJECTS.</div><span class="hub-feature-foot">Every member gets room for their own work, writing and experiments. Connections are optional. Identity isn&#x27;t.</span></div><div class="hub-profile-side"><span class="hub-micro">THE MEMBER INDEX / IN PREPARATION</span><h3 class="hub-side-title">THE PEOPLE MAKE THE WORK.<br/>WE MAKE THE SPACE.</h3><p class="hub-side-desc">Individual profiles and links to members&#x27; own portfolios will appear here as they&#x27;re ready. No invented bios, no assigned roles.</p><a href="#vision" class="hub-cta">WHAT CONNECTS US <span>↗</span></a></div></div></section><section id="work" class="hub-section hub-work"><div class="hub-eyebrow"><span>02 / INDIVIDUAL WORK</span><span>OWN PROJECTS. OWN CREDIT.</span></div><div class="hub-work-intro"><h2 class="hub-heading">THINGS<br/>WE MAKE.</h2><p class="hub-work-sub">Not everything shown here is made together. People pursue their own questions and own their own work.</p></div><div class="hub-work-grid"><article class="hub-work-card"><div class="hub-work-art"><span class="hub-micro">01 / SOFTWARE</span><strong class="hub-work-art-strong">DROP<br/>TAP.</strong><span class="hub-micro">INTERACTIVE / REACTION TEST</span></div><div class="hub-work-meta"><span>INDEPENDENT PROJECT</span><span>GAME / UI</span></div><h3 class="hub-work-name">Drop Tap</h3><p class="hub-work-summary">A reaction-testing game with multiple modes, scoring, and a leaderboard. Built for people to play, not just read about.</p><p class="hub-work-status">STATUS / BUILT — ITERATING</p></article><article class="hub-work-card"><div class="hub-work-art hub-work-art-secondary"><span class="hub-micro">02 / ENGINEERING</span><strong class="hub-work-art-strong">WALK<br/>CYCLE.</strong><span class="hub-micro">GEOMETRY / SIMULATION</span></div><div class="hub-work-meta"><span>INDEPENDENT PROJECT</span><span>MECHANICS</span></div><h3 class="hub-work-name">Jansen Linkage</h3><p class="hub-work-summary">Experimenting with the geometry and behavior of a walking mechanism, including CAD and simulation challenges.</p><p class="hub-work-status">STATUS / EXPERIMENTING</p></article><article class="hub-work-card"><div class="hub-work-art"><span class="hub-micro">03 / BIOMEDICAL</span><strong class="hub-work-art-strong">PULSE<br/>FLOW.</strong><span class="hub-micro">PHYSICAL MODEL / PROTOTYPE</span></div><div class="hub-work-meta"><span>INDEPENDENT PROJECT</span><span>EDUCATION</span></div><h3 class="hub-work-name">Working Heart Model</h3><p class="hub-work-summary">An educational prototype exploring pumping, fluid circulation, and the mechanics of the heart.</p><p class="hub-work-status">STATUS / IN DEVELOPMENT</p></article></div><p class="hub-disclaimer">A few individual explorations to start with. When member pages are added, these projects can link to their creators and full process notes. They are not presented as collective collaborations.</p></section><section id="collaborations" class="hub-section hub-collab"><div class="hub-eyebrow"><span>03 / WHEN WE COLLABORATE</span><span>OPTIONAL. INTENTIONAL. SHARED.</span></div><div class="hub-collab-intro"><h2 class="hub-collab-head">WHEN<br/>PATHS<br/>CROSS.</h2><p class="hub-collab-introtext">Sometimes our interests overlap and we decide to make something together. Those projects belong to their contributors—not automatically to everyone in the collective.</p></div><div class="hub-collab-panel"><div class="hub-collab-symbol"><span>○</span><span>↔</span><span>○</span></div><div class="hub-collab-empty"><span class="hub-micro">THE COLLABORATIVE PROJECT INDEX</span><h3 class="hub-empty-head">NOTHING PUBLISHED<br/>HERE YET.</h3><p class="hub-empty-copy">This space is reserved for projects made together. When there&#x27;s something to show, we&#x27;ll explain what we built and credit the people who worked on it.</p><a href="#vision" class="hub-cta">WHY WE WORK THIS WAY <span>↗</span></a></div></div></section><section id="vision" class="hub-section hub-vision"><div class="hub-eyebrow"><span>04 / WHY WE EXIST</span><span>A REASON TO MAKE ROOM</span></div><h2 class="hub-vision-head">CURIOSITY<br/>DOESN&#x27;T<br/>FOLLOW A<br/>TIMETABLE.</h2><div class="hub-manifesto"><div class="hub-principle"><span class="hub-principle-no">01 / THE FRICTION</span><h3 class="hub-principle-title">MORE THAN<br/>THE SYLLABUS.</h3><p class="hub-principle-copy">Growing up within Korea&#x27;s educational expectations can leave little room for interests that don&#x27;t fit the next test, grade, or prescribed path. We know what it&#x27;s like to want to try more than the schedule allows.</p></div><div class="hub-principle"><span class="hub-principle-no">02 / OUR RESPONSE</span><h3 class="hub-principle-title">START<br/>ANYWAY.</h3><p class="hub-principle-copy">We make space for people to learn, experiment, build, write, research, or create on their own terms. A finished product isn&#x27;t required; curiosity and the effort to pursue it are enough to begin.</p></div><div class="hub-principle"><span class="hub-principle-no">03 / OUR PRINCIPLE</span><h3 class="hub-principle-title">TOGETHER.<br/>NOT THE SAME.</h3><p class="hub-principle-copy">We don&#x27;t have to share a major, career plan, opinion, or interest. We can support each other without becoming one voice—and choose to collaborate when our paths genuinely meet.</p></div></div><div class="hub-vision-closer"><span class="hub-micro">OUR COLLECTIVE / NOT OUR UNIFORM</span><p class="hub-vision-quote">DIFFERENT PEOPLE.<br/>DIFFERENT AMBITIONS.<br/>A SPACE TO KEEP GOING.</p></div></section><div><section id="log" class="hub-section hub-log"><div class="hub-eyebrow"><span>05 / THE LOG</span><span>PROCESS OVER POLISH</span></div><h2 class="hub-log-title">DOCUMENT<br/>THE MESS.</h2><div class="hub-log-panel"><span class="hub-log-left">NO ENTRIES PUBLISHED YET / 000</span><div><p class="hub-log-copy">The notes, detours, rough drafts, and discoveries matter too. This will be a shared index of whatever members choose to document.</p><p class="hub-log-note">Not every attempt becomes a finished project. We want the process to have a place here, even when the outcome is uncertain.</p><div class="hub-log-types"><span class="hub-log-pill">FIELD NOTES</span><span class="hub-log-pill">WORK IN PROGRESS</span><span class="hub-log-pill">WHAT DIDN&#x27;T WORK</span></div></div></div></section><footer id="contact" class="hub-footer"><div class="hub-footer-top"><span>STUPID IDIOTS / AN INDEPENDENT COLLECTIVE</span><span>PEOPLE FIRST. ALWAYS.</span></div><h2 class="hub-footer-head">NOT ONE<br/>THING.<br/>NOT ONE<br/>PERSON.</h2><div class="hub-footer-bottom"><a href="#top" class="hub-footer-link">BACK TO TOP ↑</a></div></footer></div><script src="js/jquery.js?site=6acb358c66ef34341b2d5292" type="text/javascript"  ></script><script src="js/webflow-script.js" type="text/javascript"  ></script></body></html>
