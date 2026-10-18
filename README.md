@@ -13,13 +13,13 @@ Visit `http://localhost:8000`. Python 3.10+ is enough; there are no packages to 
 
 ## Publish a member post
 
-1. Open the site's **Write a post** page (`journal/write.html`). Fill in your name, title, short summary, and story; optionally choose a related project.
-2. **Copy Markdown**, then **Open GitHub**. Paste the complete Markdown into the new file and commit it, or propose a pull request if the branch requires review. The editor also offers a `.md` download.
+1. Copy [`posts/_template.md`](posts/_template.md) into a new file named `posts/YYYY-MM-DD-a-short-title.md`, either on GitHub or locally.
+2. Fill in your name, title, matching date, summary, and Markdown story; optionally set a related project. Commit the file or propose a pull request if the branch requires review.
 3. When the Markdown reaches `main`, the **Build journal** GitHub Actions workflow validates it and commits the generated journal pages, homepage updates, and related-project updates. Your existing static hosting must publish the resulting files.
 
-There are no website accounts or server submission endpoints. Publishing uses members' existing GitHub repository access. Draft text stays in the current browser when local storage is available; the editor does not transmit it. The GitHub link contains only the proposed filename. A public copy of the writing page doesn't grant permission to change the repository.
+There are no website accounts or server submission endpoints. Publishing uses members' existing GitHub repository access.
 
-Members comfortable editing files can copy `posts/_template.md` instead. See [the posting guide](posts/README.md) for Markdown, images, drafts, editing, and removal.
+See [the posting guide](posts/README.md) for GitHub steps, Markdown, images, drafts, editing, and removal.
 
 ## Repository setup
 
@@ -33,13 +33,12 @@ The workflow uses the repository's built-in token. It needs no application secre
 - `projects/index.html` and `projects/*.html` — project directory and individual overviews.
 - `about.html` — collective, vision, and collaboration context.
 - `journal/index.html` and generated dated pages — member posts.
-- `journal/write.html` — local draft editor and Markdown export.
 - `posts/*.md` — editable post sources; `_template.md` and `README.md` aren't published.
 - `scripts/build_posts.py` and `scripts/templates/` — static journal builder and page templates.
 
 Edit project and About content in the HTML pages. Keep project names/statuses consistent across their homepage card, directory entry, and detail page. The builder owns the marked journal sections in the homepage and project pages. Edit journal layouts in `scripts/templates/`, then rebuild. It only removes dated output files recorded in `journal/.generated-posts.json`; never edit generated posts directly.
 
-Styling is in `css/`, with original navy, ice, and lavender colors. `js/site.js` controls the mobile menu; `js/motion.js` adds optional animation. Browsing works without JavaScript; the writing helper requires it. No external fonts, analytics, or runtime dependencies are loaded.
+Styling is in `css/`, with original navy, ice, and lavender colors. `js/site.js` controls the mobile menu; `js/motion.js` adds optional animation. Browsing works without JavaScript. No external fonts, analytics, or runtime dependencies are loaded.
 
 Artwork is conceptual rather than product screenshots or engineering schematics. Creator credits and external project links remain unpublished until real information is available. No member posts have been invented.
 

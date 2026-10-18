@@ -4,7 +4,6 @@
 .journal-intro h1 { font-size: clamp(34px,3.4vw,49px); line-height: 1.12; letter-spacing: -.045em; margin: 13px 0 18px; }
 .journal-intro h1 em { color: #7c5ca4; font-family: Georgia,serif; font-weight: 400; }
 .journal-intro p { max-width: 580px; font-size: 14px; }
-.journal-intro > .button { flex: none; margin-bottom: 4px; }
 .journal-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 0 0 20px; border-bottom: 1px solid var(--line); margin-bottom: 25px; }
 .journal-toolbar h2 { display: flex; align-items: center; gap: 10px; font-size: 23px; }
 .journal-toolbar > span { font-size: 11px; color: var(--muted); }
@@ -24,19 +23,11 @@
 .journal-empty { grid-column: 1 / -1; border: 1px dashed #cfc3df; border-radius: 26px 70px 26px 26px; background: linear-gradient(120deg,#ece7f673,#f5f7fc); padding: 34px; }
 .journal-empty h2 { font-size: 25px; margin-bottom: 11px; }
 .journal-empty p { font-size: 14px; max-width: 620px; }
-.journal-empty a { display: inline-flex; align-items: center; min-height: 44px; color: var(--purple); font-size: 13px; font-weight: 600; margin-top: 12px; }
-.journal-empty a:hover { text-decoration: underline; }
-.contribute-strip { display: flex; align-items: center; gap: 23px; margin-top: 42px; padding: 26px 0 0; border-top: 1px solid var(--line); }
-.contribute-strip > span { font-size: 42px; color: #9b80bd; line-height: 1; }
-.contribute-strip h2 { font-size: 21px; }
-.contribute-strip p { font-size: 12px; margin-top: 7px; }
-.contribute-strip > a { margin-left: auto; flex: none; }
 .home-journal { margin-top: 23px; }
 .home-journal:empty { display: none; }
 .home-journal .journal-empty { padding: 17px 23px; background: transparent; border-style: solid; border-color: #ddd7e5; border-radius: 20px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
 .home-journal .journal-empty h2 { font-size: 15px; margin: 0; }
 .home-journal .journal-empty p { font-size: 11px; flex: 1; margin: 0; }
-.home-journal .journal-empty a { font-size: 11px; margin: 0; min-height: 36px; }
 .project-journal { margin-top: 30px; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
 .project-journal:empty { display: none; }
 .project-journal > h2 { grid-column: 1 / -1; font-size: 24px; }
@@ -71,7 +62,6 @@
 .post-footer { max-width: 820px; margin: 37px auto 0; border-top: 1px solid var(--line); padding-top: 21px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .edit-link { font-size: 12px; color: var(--muted); display: inline-flex; min-height: 40px; align-items: center; gap: 9px; }
 .edit-link:hover { color: var(--purple); text-decoration: underline; }
-.write-nav { color: var(--purple); }
 @media(max-width:800px) {
   .journal-intro { gap: 20px; }
   .journal-intro h1 { font-size: 36px; }
@@ -79,14 +69,11 @@
   .journal-cover { margin: -20px -20px 18px; width: calc(100% + 40px); }
   .journal-title { font-size: 21px; }
   .journal-grid, .home-journal, .project-journal { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
-  .contribute-strip { gap: 17px; }
-  .contribute-strip h2 { font-size: 19px; }
 }
 @media(max-width:600px) {
   .journal-intro { display: block; margin-bottom: 29px; }
   .journal-intro h1 { font-size: 34px; }
   .journal-intro p { font-size: 14px; }
-  .journal-intro > .button { margin-top: 21px; }
   .journal-toolbar { align-items: start; gap: 11px; }
   .journal-toolbar h2 { font-size: 21px; }
   .journal-toolbar > span { max-width: 130px; text-align: right; font-size: 9px; }
@@ -98,9 +85,6 @@
   .journal-empty p { font-size: 13px; }
   .home-journal .journal-empty { gap: 8px; }
   .home-journal .journal-empty p { flex: auto; width: 100%; }
-  .contribute-strip { display: grid; grid-template-columns: 32px 1fr; gap: 14px; margin-top: 30px; }
-  .contribute-strip > span { font-size: 32px; align-self: start; }
-  .contribute-strip > a { grid-column: 2; margin-left: 0; justify-self: start; }
   .post-summary { font-size: 16px; }
   .post-byline { font-size: 11px; gap: 8px; }
   .post-project { width: 100%; margin: 5px 0 0 32px; }

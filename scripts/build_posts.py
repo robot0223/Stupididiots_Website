@@ -304,13 +304,12 @@ def cards(posts: list[Post], prefix: str = "", heading: str = "h2", asset_prefix
     return "\n".join(output)
 
 
-def empty_state(prefix: str = "", project: bool = False) -> str:
-    heading = "The next chapter is yours." if not project else "What happens next?"
-    text = ("No posts published yet. A rough sketch, a useful discovery, or a project update — it all belongs here."
-            if not project else "No updates for this project yet. Members can share the next experiment or milestone.")
+def empty_state(project: bool = False) -> str:
+    heading = "Notes from the collective." if not project else "Project updates"
+    text = ("No posts published yet. Project updates, experiments, and notes will appear here."
+            if not project else "No updates for this project yet. New experiments and milestones will appear here.")
     return (f'<div class="journal-empty"><span class="journal-empty-mark" aria-hidden="true">✳</span>'
-            f'<h2>{heading}</h2><p>{text}</p>'
-            f'<a class="inline-link" href="{prefix}write.html">Write a post <span aria-hidden="true">↗</span></a></div>')
+            f'<h2>{heading}</h2><p>{text}</p></div>')
 
 
 def template(source: str, values: dict[str, str]) -> str:
@@ -418,7 +417,7 @@ def build(root: Path = ROOT, check: bool = False) -> int:
         raise BuildError("Pages containing journal markers cannot be symlinks.")
     if homepage.exists():
         page_updates[homepage] = replace_marker(homepage.read_text(encoding="utf-8"), "latest",
-                                               cards(posts[:3], "journal/", "h3", "") or empty_state("journal/"))
+                                               cards(posts[:3], "journal/", "h3", "") or empty_state())
     for slug in PROJECTS:
         page = root / "projects" / (slug + ".html")
         if page.is_symlink() or page.parent.is_symlink():
@@ -426,7 +425,7 @@ def build(root: Path = ROOT, check: bool = False) -> int:
         if page.exists():
             selected = [post for post in posts if post.project == slug]
             page_updates[page] = replace_marker(page.read_text(encoding="utf-8"), "project:" + slug,
-                                               cards(selected, "../journal/", "h3") or empty_state("../journal/", True))
+                                               cards(selected, "../journal/", "h3") or empty_state(project=True))
     if not check:
         journal_dir.mkdir(parents=True, exist_ok=True)
         for name, content in generated.items():

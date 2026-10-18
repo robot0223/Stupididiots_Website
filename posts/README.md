@@ -4,14 +4,14 @@ Members publish through this repository's existing GitHub access. The website do
 
 ## The easiest route
 
-1. Open **Journal → Write a post** on the website. Fill in your name, title, summary, and post. The writer prepares a Markdown file that you can copy or download.
-2. Open this repository on GitHub. In `posts/`, select **Add file → Create new file** (or upload the downloaded Markdown file).
+1. Open [`_template.md`](_template.md) in this folder and copy its contents.
+2. Open this repository on GitHub. In `posts/`, select **Add file → Create new file**.
 3. Name it `YYYY-MM-DD-a-short-title.md`, for example `2026-10-19-testing-a-new-idea.md`. Use lowercase letters, numbers, and hyphens, with at least one letter in the title part. The filename date and the `date` field must match.
-4. Paste the Markdown. Use your own name and actual work. Set `draft: false` when you want the entry to appear, or omit `draft`.
+4. Paste the template, fill in your name, title, date, summary, and any related project, then replace the body with your Markdown post. Use your own name and actual work. Set `draft: false` when you want the entry to appear, or omit `draft`.
 5. Commit to `main` if your repository permissions allow it, or create a branch and pull request for review. **Build journal** validates pull requests with read-only repository permissions. Merging to `main` runs the publishing job in GitHub Actions.
 6. Check that the action succeeds. It commits the generated journal, homepage cards, and relevant project updates to the same branch. The site's existing hosting process can then serve those files.
 
-You can also copy `_template.md`, rename the copy, and edit it in GitHub or a text editor. The template and this README are never published as posts. No example member posts are included in the site.
+You can also copy `_template.md` locally, rename the copy, and edit it in a text editor before committing or uploading it to GitHub. The template and this README are never published as posts. No example member posts are included in the site.
 
 The publishing action must be allowed to write repository contents. Branch protection or an organization policy may require the local-build route below instead. If a member pushes another commit while the action is running, its normal push can fail safely; run **Build journal → Run workflow** again after reviewing the branch. The action never force-pushes. It does not configure or change hosting. In particular, commits made with GitHub's workflow token do not trigger a separate GitHub Pages branch build; an existing deployment workflow must build/deploy the updated site, or a member can include the generated pages in their own commit.
 
@@ -72,6 +72,6 @@ Commit the Markdown, any images, and the generated changes together if you build
 
 `journal/index.html`, `journal/YYYY-MM-DD-title.html`, and `journal/feed.json` are generated. The feed is a plain JSON list for future integrations, with no generated timestamp. The build also refreshes marked journal sections in the homepage and existing project pages. Newer dates appear first, with reverse filename order as a stable tie-breaker.
 
-Keep `journal/.generated-posts.json` committed. It records the generated files that the builder owns, so deleting a post removes only its old generated page. Other files such as `journal/write.html` are preserved. The builder refuses to replace an existing journal output that is not recorded in its manifest. Edit the templates in `scripts/templates/` for shared journal layout changes, then rebuild.
+Keep `journal/.generated-posts.json` committed. It records the generated files that the builder owns, so deleting a post removes only its old generated page. Files outside that manifest are preserved. The builder refuses to replace an existing journal output that is not recorded in its manifest. Edit the templates in `scripts/templates/` for shared journal layout changes, then rebuild.
 
 The GitHub action watches source Markdown, post images, the builder, tests, and templates. Pull requests into `main` run tests and validation against GitHub's merge ref without writing to the repository. Pushes to `main` and manual branch runs build and commit the results. Generated output is excluded from its triggers, so its own commit does not cause a publishing loop.

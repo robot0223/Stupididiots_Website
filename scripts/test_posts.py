@@ -54,7 +54,7 @@ class PublishingTests(unittest.TestCase):
         self.assertEqual(build(self.root), 0)
         self.assertIn("No posts published yet", self.generated("index"))
         self.assertEqual(json.loads((self.root / "journal/feed.json").read_text()), [])
-        self.assertIn('href="journal/write.html"', (self.root / "index.html").read_text())
+        self.assertIn('No posts published yet', (self.root / "index.html").read_text())
 
     def test_json_metadata_and_unicode(self):
         self.post(title='A "quoted" title: 안녕하세요', author="테스트")
@@ -215,11 +215,11 @@ class PublishingTests(unittest.TestCase):
     def test_deletion_preserves_unowned_files(self):
         path = self.post()
         build(self.root)
-        (self.root / "journal/write.html").write_text("authored writer page")
+        (self.root / "journal/notes.html").write_text("authored notes page")
         path.unlink()
         build(self.root)
         self.assertFalse((self.root / "journal/2026-10-19-first-experiment.html").exists())
-        self.assertEqual((self.root / "journal/write.html").read_text(), "authored writer page")
+        self.assertEqual((self.root / "journal/notes.html").read_text(), "authored notes page")
 
     def test_existing_unowned_output_is_not_overwritten(self):
         (self.root / "journal").mkdir()
@@ -230,7 +230,7 @@ class PublishingTests(unittest.TestCase):
 
     def test_manifest_cannot_delete_arbitrary_files(self):
         build(self.root)
-        for data in (["../index.html"], ["write.html"], {"path": "index.html"}, ["index.html", "index.html"]):
+        for data in (["../index.html"], ["notes.html"], {"path": "index.html"}, ["index.html", "index.html"]):
             with self.subTest(data=data):
                 (self.root / "journal/.generated-posts.json").write_text(json.dumps(data))
                 before = self.snapshot()
