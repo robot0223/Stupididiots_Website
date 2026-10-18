@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="540" viewBox="0 0 720 540" role="img" aria-labelledby="title desc">
+  <title id="title">Drop Tap — a study in reaction</title>
+  <desc id="desc">An abstract violet target, fine measurement rings and a ball tracing an arc toward its centre.</desc>
+  <defs>
+    <linearGradient id="ground" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#EAE6FA"/><stop offset="1" stop-color="#DBE7F6"/></linearGradient>
+    <radialGradient id="wash"><stop stop-color="#B9A7ED" stop-opacity=".42"/><stop offset="1" stop-color="#B9A7ED" stop-opacity="0"/></radialGradient>
+    <linearGradient id="sphere" x1=".1" y1="0" x2=".8" y2="1"><stop stop-color="#AC90EF"/><stop offset="1" stop-color="#7356B7"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#344573" stroke-width=".55" opacity=".07"/></pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="m2 2 5 3-5 3" fill="none" stroke="#25345F" stroke-width="1.2"/></marker>
+  </defs>
+  <path fill="url(#ground)" d="M0 0h720v540H0z"/>
+  <path fill="url(#grid)" d="M0 0h720v540H0z"/>
+  <ellipse cx="358" cy="279" rx="280" ry="236" fill="url(#wash)"/>
+  <g fill="none" stroke="#25345F">
+    <path d="M71 270h578M360 38v464" stroke-width=".8" opacity=".15"/>
+    <circle cx="360" cy="270" r="206" stroke-width=".8" opacity=".22"/>
+    <circle cx="360" cy="270" r="178" stroke-width="1" stroke-dasharray="1 12" stroke-linecap="round" opacity=".45"/>
+    <circle cx="360" cy="270" r="150" stroke-width="1.25" opacity=".72"/>
+    <circle cx="360" cy="270" r="111" stroke-width="1.25" opacity=".62"/>
+    <circle cx="360" cy="270" r="72" stroke-width="1.25" opacity=".62"/>
+    <path d="M360 58v12m0 400v12M148 270h12m400 0h12M210 120l9 9m282 282 9 9m0-300-9 9M219 411l-9 9" stroke-width="1.2" opacity=".55"/>
+    <path d="M218 167c-37 45-44 107-13 152" stroke="#8D6BCE" stroke-width="5" stroke-linecap="round"/>
+    <path d="M416 167c31 17 53 48 55 83" stroke="#8D6BCE" stroke-width="3" stroke-linecap="round"/>
+    <path d="M509 104c68 39 64 146 6 188-45 32-95 27-137-4" stroke-width="1.7" marker-end="url(#arrow)"/>
+    <path d="M527 84c33 21 56 52 61 84" stroke-width=".8" stroke-dasharray="3 7" opacity=".36"/>
+  </g>
+  <circle cx="360" cy="270" r="34" fill="#B09ADD" fill-opacity=".5" stroke="#25345F" stroke-width="1.25"/>
+  <circle cx="360" cy="270" r="5" fill="#25345F"/>
+  <circle cx="509" cy="104" r="22" fill="url(#sphere)" stroke="#7356B7" stroke-width="1"/>
+  <circle cx="502" cy="97" r="5" fill="#E6DAFF" opacity=".58"/>
+  <g stroke="#25345F" stroke-width="1" fill="none" opacity=".5"><path d="M80 84h12m-6-6v12M628 444h12m-6-6v12"/><path d="M96 430v21h21M603 89h21v21"/></g>
+  <g fill="#25345F" opacity=".3"><circle cx="96" cy="270" r="2"/><circle cx="624" cy="270" r="2"/><circle cx="360" cy="482" r="2"/></g>
+</svg>

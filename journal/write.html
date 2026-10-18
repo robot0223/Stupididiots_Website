@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fc">
+  <title>Write a post — Stupid Idiots</title>
+  <meta name="description" content="Turn a project update, experiment, or small discovery into a Markdown post for the Stupid Idiots journal.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/site.css">
+  <link rel="stylesheet" href="../css/writer.css">
+  <script src="../js/site.js" defer></script>
+  <script src="../js/writer.js" defer></script>
+  <script src="../js/motion.js" defer></script>
+</head>
+<body id="top" class="writer-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container header-inner">
+  <a class="brand" href="../index.html" aria-label="Stupid Idiots home">STUPID IDIOTS<span>.</span><span class="brand-mark" aria-hidden="true">✳</span></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu <span aria-hidden="true">+</span></button>
+  <nav id="site-navigation" class="site-navigation" aria-label="Main navigation"><a href="../index.html">Home</a><a href="../projects/index.html">Projects</a><a href="../journal/index.html">Journal</a><a href="../about.html">About</a><a href="../journal/write.html" aria-current="page">Write a post</a></nav>
+  <button class="motion-toggle" type="button" aria-pressed="false" hidden>Pause motion</button>
+</div></header>
+<main id="main" tabindex="-1" class="container page-main writer-main">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><span aria-hidden="true">/</span><a href="index.html">Journal</a><span aria-hidden="true">/</span><span aria-current="page">Write a post</span></nav>
+  <section class="writer-intro" aria-labelledby="writer-title"><div><p class="eyebrow">A little work in progress</p><h1 id="writer-title">Something worth<br><em>sharing?</em></h1><p>An experiment, an update, a happy accident. Give it a place in the journal.</p></div><div class="writer-orbit" aria-hidden="true"><span>✳</span><i></i><b>ideas in motion</b></div></section>
+  <ol class="publish-steps" aria-label="How to publish"><li><span>01</span><div><strong>Write it here</strong><p>Shape your post and see it take form.</p></div></li><li><span>02</span><div><strong>Copy the Markdown</strong><p>Everything, including the post details.</p></div></li><li><span>03</span><div><strong>Paste &amp; commit on GitHub</strong><p>Repo members add the file to publish.</p></div></li></ol>
+  <noscript><div class="writer-noscript">The editor needs JavaScript for its preview and Markdown export. You can also add a Markdown file directly to the repository’s <a href="https://github.com/robot0223/Stupididiots_Website/tree/main/posts" target="_blank" rel="noopener noreferrer">posts folder on GitHub</a>, using the template in <code>posts/_template.md</code>.</div></noscript>
+  <div class="writer-workspace">
+    <section class="editor-panel" aria-labelledby="editor-heading"><div class="editor-panel-heading"><h2 id="editor-heading">Your draft</h2><div class="draft-controls"><span class="draft-status" id="draft-status" role="status" aria-live="polite">Draft stays on this device</span><button id="new-draft" class="new-draft-button" type="button" hidden>New draft <span aria-hidden="true">+</span></button></div></div>
+      <form id="post-form" class="post-form">
+        <div class="writer-field"><label for="post-title">Title <span>required</span></label><input id="post-title" name="title" maxlength="100" required placeholder="What have you been working on?" autocomplete="off"></div>
+        <div class="writer-fields-two"><div class="writer-field"><label for="post-author">Your name <span>required</span></label><input id="post-author" name="author" maxlength="80" required placeholder="Name or handle" autocomplete="name"></div><div class="writer-field"><label for="post-date">Date <span>required</span></label><input id="post-date" name="date" type="date" required></div></div>
+        <div class="writer-fields-two"><div class="writer-field"><label for="post-category">Type of post</label><select id="post-category" name="category"><option>Project update</option><option>Experiment</option><option>Note</option></select></div><div class="writer-field"><label for="post-project">Related project <span>optional</span></label><select id="post-project" name="project"><option value="">No specific project</option><option value="drop-tap">Drop Tap</option><option value="jansen-linkage">Jansen Linkage</option><option value="heart-model">Working Heart Model</option></select></div></div>
+        <div class="writer-field"><label for="post-summary">The short version <span>required</span></label><textarea id="post-summary" name="summary" maxlength="240" rows="3" required placeholder="A sentence or two for people browsing the journal." aria-describedby="summary-hint"></textarea><div class="field-footnote" id="summary-hint"><span>Shown on the journal page.</span><span id="summary-count">0 / 240</span></div></div>
+        <div class="writer-field"><label for="post-body">The story <span>required</span></label><textarea id="post-body" name="body" class="body-input" maxlength="20000" rows="13" required placeholder="Start wherever you are. What did you try, make, or learn?" aria-describedby="body-hint" spellcheck="true"></textarea><div class="field-footnote" id="body-hint"><span>Markdown welcome. Keep it human.</span><span id="body-count">0 words</span></div></div>
+        <details class="writing-help"><summary>A few useful Markdown shortcuts <span aria-hidden="true">+</span></summary><dl><div><dt>Heading</dt><dd><code>## What happened</code></dd></div><div><dt>Emphasis</dt><dd><code>**bold** and *italic*</code></dd></div><div><dt>List</dt><dd><code>- One thing we tried</code></dd></div><div><dt>Link</dt><dd><code>[Link text](https://example.com)</code></dd></div><div><dt>Quote</dt><dd><code>&gt; A thought worth keeping.</code></dd></div><div><dt>Code</dt><dd><code>`inline code`</code> or a block wrapped in <code>```</code></dd></div></dl><p>Headings, lists, quotes, code, and web links are supported. HTML stays as text.</p><p>Adding photos? Upload them to the repository first, then follow the <a href="https://github.com/robot0223/Stupididiots_Website/blob/main/posts/README.md" target="_blank" rel="noopener noreferrer">image instructions on GitHub ↗</a>. Images are not shown in this preview.</p></details>
+        <div class="writer-actions"><button class="button" id="copy-markdown" type="button">Copy Markdown <span aria-hidden="true">↗</span></button><button class="download-button" id="download-markdown" type="button">Download .md <span aria-hidden="true">↓</span></button></div>
+        <p id="export-status" class="export-status" role="status" aria-live="polite"></p>
+        <div class="copy-fallback" id="copy-fallback" hidden><label for="markdown-output">Copy your Markdown from here</label><textarea id="markdown-output" readonly rows="10" aria-describedby="copy-help"></textarea><p id="copy-help">Select all, then copy. Paste the complete text into the new file on GitHub.</p></div>
+        <div class="github-step"><div><h3>Ready for the journal?</h3><p>Open the new file on GitHub, paste your Markdown, then commit it. Repository access is required. This editor only prepares the file.</p><code id="post-filename">posts/your-post.md</code></div><a id="github-create" class="inline-link" href="https://github.com/robot0223/Stupididiots_Website/new/main?filename=posts%2Fyour-post.md" target="_blank" rel="noopener noreferrer">Open GitHub <span aria-hidden="true">↗</span></a></div>
+      </form>
+    </section>
+    <aside class="preview-panel" aria-labelledby="preview-heading"><div class="preview-panel-heading"><h2 id="preview-heading">A first look</h2><span>Live preview</span></div><article class="post-preview"><div class="preview-labels"><span id="preview-category">Project update</span><span id="preview-project" hidden></span></div><h2 id="preview-title" class="preview-title">Your next small discovery.</h2><div class="preview-byline"><span class="preview-avatar" id="preview-avatar" aria-hidden="true">✳</span><span id="preview-author">Your name</span><span aria-hidden="true">·</span><time id="preview-date"></time></div><p id="preview-summary" class="preview-summary is-placeholder">The short version of your story will appear here.</p><div id="preview-body" class="preview-body"><p class="is-placeholder">This is your space for the details. Start writing on the left, and watch your post take shape.</p></div></article><p class="preview-note">A preview of your words. Your draft is saved in this browser when local storage is available.</p></aside>
+  </div>
+</main>
+<footer class="site-footer" id="contact"><div class="container footer-main"><a class="brand" href="../index.html">STUPID IDIOTS<span>.</span></a><p>One voice. Different minds.</p><nav aria-label="Footer navigation"><a href="../projects/index.html">Projects</a><a href="../journal/index.html">Journal</a><a href="../about.html">About the collective</a></nav></div><div class="container footer-bottom"><span>© 2026 Stupid Idiots</span><span>Together in what we believe. Free in what we make.</span></div></footer>
+</body>
+</html>
