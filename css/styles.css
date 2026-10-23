@@ -1,4 +1,4 @@
-/* Stupid Idiots: native Webflow styles, responsive content layout, and ribbon.
+/* Stupid Idiots: native Webflow styles and responsive content layout.
    Edit bracketed project and member text in index.html. */
 /* Base */
 html {
@@ -188,19 +188,8 @@ a {
   line-height: 1.7;
   letter-spacing: 0.12em;
 }
-.flow-ribbon-layer {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  opacity: 0.55;
-  pointer-events: none;
-  mix-blend-mode: normal;
-}
 .hub-em {
-  font-family: Georgia;
+  font-family: inherit;
   color: #8d78b5;
   font-style: normal;
   font-weight: inherit;
@@ -314,7 +303,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Georgia;
+  font-family: inherit;
   color: rgba(120, 100, 163, 0.24);
   line-height: 1;
   font-style: normal;
@@ -455,7 +444,7 @@ a {
 }
 .hub-portrait-number {
   position: relative;
-  font-family: Georgia;
+  font-family: inherit;
   color: rgba(124, 109, 155, 0.4);
   font-size: 75px;
   line-height: 1;
@@ -602,33 +591,6 @@ a {
 }
 .hub-project.hub-project-featured {
 }
-.h06-orbit {
-  position: absolute;
-  left: 14%;
-  top: 18%;
-  z-index: 1;
-  width: 74%;
-  height: 57%;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #b7a7ef;
-  border-right-style: solid;
-  border-right-width: 1px;
-  border-right-color: #b7a7ef;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #b7a7ef;
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-left-color: #b7a7ef;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  opacity: 0.48;
-  pointer-events: none;
-  transform: rotate(-19deg);
-}
 .h06-descriptor {
   max-width: 550px;
   margin-top: 43px;
@@ -694,6 +656,7 @@ a {
 .hub-project-visual.hub-visual-pearl {
 }
 .flow-ribbon-page {
+  isolation: isolate;
   position: relative;
   width: 100%;
   overflow-x: clip;
@@ -1703,75 +1666,6 @@ a {
   .hub-reveal {
     transform: none !important;
     opacity: 1 !important;
-  }
-}
-
-/* Continuous ribbon */
-
-.flow-ribbon-page {
-  position: relative;
-  isolation: isolate;
-  overflow: clip;
-}
-.flow-ribbon-layer {
-  --ribbon-opacity: 0.44;
-  --ribbon-width: clamp(2.5px, 0.6vw, 8.6px);
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none !important;
-  z-index: 2;
-  opacity: 1;
-}
-.flow-ribbon-layer > .w-embed {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-.si-bubble-ribbon {
-  position: absolute;
-  left: 0;
-  display: block;
-  width: 100%;
-  overflow: visible;
-  pointer-events: none;
-  opacity: var(--ribbon-opacity);
-}
-.si-bubble-hero {
-  top: 0;
-  height: 100svh;
-}
-.si-bubble-tail {
-  top: 100svh;
-  height: calc(100% - 100svh);
-}
-.si-bubble-ribbon use {
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  vector-effect: non-scaling-stroke;
-}
-.si-bubble-edge {
-  stroke-width: var(--ribbon-width);
-}
-.si-bubble-pearl {
-  stroke-width: clamp(1px, 0.28vw, 4px);
-  opacity: 0.6;
-}
-.si-bubble-glint {
-  stroke-width: clamp(0.35px, 0.06vw, 0.85px);
-  opacity: 0.65;
-}
-.flow-ribbon-content {
-  position: relative;
-  z-index: 3;
-}
-@media (prefers-reduced-motion: reduce) {
-  .flow-ribbon-layer {
-    transform: none !important;
   }
 }
 

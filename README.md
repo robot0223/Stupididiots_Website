@@ -8,9 +8,9 @@ Open `index.html`, or run `python3 -m http.server 8000` from this directory and 
 
 ## Files
 
-- `index.html` — hero, About, three featured project slots, three member profiles, footer, and inline SVG ribbon.
-- `css/styles.css` — layout, responsive rules, placeholder artwork, hover effects, and ribbon styling.
-- `js/main.js` — scroll-linked text entrances, with reduced-motion support. The ribbon follows the page without a continuous animation loop.
+- `index.html` — hero, About, three featured project slots, three member profiles, and footer.
+- `css/styles.css` — layout, responsive rules, placeholder artwork, and hover effects.
+- `js/main.js` — scroll-linked text entrances, with reduced-motion support.
 
 ## Replace the editable slots
 
@@ -30,12 +30,14 @@ Remove the small draft notes and “EDITABLE SLOT” badges when real content is
 
 ## Editing and hosting
 
-The hero typography and current purple ribbon are preserved. The page uses standard HTML, CSS, and JavaScript. The existing hero background photo loads from its Unsplash URL; other artwork is CSS or SVG. Native project accordions and all content work without JavaScript.
+The hero typography is preserved. The decorative ribbon and hero ellipse have been removed. The page uses standard HTML, CSS, and JavaScript. The existing hero background photo loads from its Unsplash URL; other artwork is CSS or SVG. Native project accordions and all content work without JavaScript.
 
 Webflow and this repository were updated together for this reconstruction. Future edits are not automatically synchronized. GitHub scroll effects are lightweight JavaScript equivalents of the native Webflow interactions.
 
-## Animation and typography update
+## Animation and typography
 
-The serif accents use the regular sans-serif font. Scroll-linked text entrances are retained, and the full-page ribbon is no longer translated continuously. The matching changes are saved in Webflow but have not been published there. Future GitHub pushes require an explicit request.
+Highlighted text uses the same sans-serif font as the surrounding text. Scroll-linked entrances stop updating when they settle and resume when the reveal target changes. Reduced-motion preferences are respected.
 
-The JavaScript pauses each text entrance when it reaches its target. Fully revealed text stays at opacity 1 with no transform and receives no animation-frame updates while scrolling beyond its reveal range. Scrolling back into the range resumes the effect. This additional optimization applies to these standalone files; Webflow's native interactions remain unchanged.
+The ribbon, guiding light, particles, and decorative hero ellipse have been removed. Webflow uses the same text-entrance JavaScript in its Home embed; the previous native text interactions are removed to avoid running both implementations.
+
+Webflow changes are saved but not published. Future GitHub pushes require an explicit request.
