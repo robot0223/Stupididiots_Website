@@ -37,3 +37,5 @@ Webflow and this repository were updated together for this reconstruction. Futur
 ## Animation and typography update
 
 The serif accents use the regular sans-serif font. Scroll-linked text entrances are retained, and the full-page ribbon is no longer translated continuously. The matching changes are saved in Webflow but have not been published there. Future GitHub pushes require an explicit request.
+
+The JavaScript pauses each text entrance when it reaches its target. Fully revealed text stays at opacity 1 with no transform and receives no animation-frame updates while scrolling beyond its reveal range. Scrolling back into the range resumes the effect. This additional optimization applies to these standalone files; Webflow's native interactions remain unchanged.
