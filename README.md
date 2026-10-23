@@ -10,7 +10,7 @@ Open `index.html`, or run `python3 -m http.server 8000` from this directory and 
 
 - `index.html` — hero, About, three featured project slots, three member profiles, footer, and inline SVG ribbon.
 - `css/styles.css` — layout, responsive rules, placeholder artwork, hover effects, and ribbon styling.
-- `js/main.js` — gentle content reveals and ribbon drift, with reduced-motion support.
+- `js/main.js` — scroll-linked text entrances, with reduced-motion support. The ribbon follows the page without a continuous animation loop.
 
 ## Replace the editable slots
 
@@ -33,3 +33,7 @@ Remove the small draft notes and “EDITABLE SLOT” badges when real content is
 The hero typography and current purple ribbon are preserved. The page uses standard HTML, CSS, and JavaScript. The existing hero background photo loads from its Unsplash URL; other artwork is CSS or SVG. Native project accordions and all content work without JavaScript.
 
 Webflow and this repository were updated together for this reconstruction. Future edits are not automatically synchronized. GitHub scroll effects are lightweight JavaScript equivalents of the native Webflow interactions.
+
+## Animation and typography update
+
+The serif accents use the regular sans-serif font. Scroll-linked text entrances are retained, and the full-page ribbon is no longer translated continuously. The matching changes are saved in Webflow but have not been published there. Future GitHub pushes require an explicit request.

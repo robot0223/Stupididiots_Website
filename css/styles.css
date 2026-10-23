@@ -202,9 +202,9 @@ a {
 .hub-em {
   font-family: Georgia;
   color: #8d78b5;
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: -0.055em;
+  font-style: normal;
+  font-weight: inherit;
+  letter-spacing: inherit;
 }
 .hub-visual-blue {
   background-image: linear-gradient(
@@ -317,7 +317,7 @@ a {
   font-family: Georgia;
   color: rgba(120, 100, 163, 0.24);
   line-height: 1;
-  font-style: italic;
+  font-style: normal;
   top: 0;
   right: 0;
   bottom: 0;
@@ -459,7 +459,7 @@ a {
   color: rgba(124, 109, 155, 0.4);
   font-size: 75px;
   line-height: 1;
-  font-style: italic;
+  font-style: normal;
 }
 .h06-core {
   position: relative;
@@ -994,10 +994,10 @@ a {
   margin: 0;
 }
 .hub-em {
-  font-family: Georgia, Times, serif;
-  font-weight: 400;
-  font-style: italic;
-  letter-spacing: -0.055em;
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: normal;
+  letter-spacing: inherit;
   color: #8d78b5;
 }
 .hub-about-copy {
@@ -1163,9 +1163,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Georgia, Times, serif;
+  font-family: inherit;
   font-size: clamp(100px, 13vw, 190px);
-  font-style: italic;
+  font-style: normal;
   color: rgba(120, 100, 163, 0.24);
   line-height: 1;
 }
@@ -1313,8 +1313,8 @@ a {
   position: relative;
   font-size: 75px;
   line-height: 1;
-  font-family: Georgia, Times, serif;
-  font-style: italic;
+  font-family: inherit;
+  font-style: normal;
   color: rgba(124, 109, 155, 0.4);
 }
 .hub-portrait-label {
