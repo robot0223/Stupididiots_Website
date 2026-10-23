@@ -1,21 +1,35 @@
 # Stupid Idiots
 
-Official website of our research group.
+A small, independent collective: different people, individual projects, and a shared space for our work.
 
-## Run locally
+## Run
 
-Open `index.html` in a browser, or run `python3 -m http.server 8000` from this directory and visit http://localhost:8000.
+Open `index.html`, or run `python3 -m http.server 8000` from this directory and open http://localhost:8000. No build step or dependencies are required.
 
-## Edit the site
+## Files
 
-- `index.html`: page content, navigation, inline SVG ribbon, radio controls, and expandable thoughts.
-- `css/styles.css`: layout, typography, responsive styles, translucent artwork, ribbon colors, and CSS animations.
-- `js/main.js`: scroll reveal, ribbon drift, and moving typography. Respects reduced-motion preferences.
+- `index.html` — hero, About, three featured project slots, three member profiles, footer, and inline SVG ribbon.
+- `css/styles.css` — layout, responsive rules, placeholder artwork, hover effects, and ribbon styling.
+- `js/main.js` — gentle content reveals and ribbon drift, with reduced-motion support.
 
-The page uses standard HTML, CSS, and JavaScript; no build step, jQuery, or Webflow runtime is required. The existing hero background photograph still loads from its Unsplash URL in the stylesheet. All other artwork uses CSS or inline SVG.
+## Replace the editable slots
 
-The Orbit / Scatter / Align controls and expandable thoughts work without JavaScript. Content remains visible if JavaScript is disabled.
+The bracketed text is intentionally unfinished; these are not claims about actual people or projects.
 
-## Design source
+### Featured projects
 
-Extracted from the saved Webflow Home design on October 23, 2026, preserving its hero and replacing the lower sections with the latest redesign. Webflow scroll interactions are reproduced in vanilla JavaScript. These repository files are the standalone site; edits here do not automatically sync back into Webflow.
+Search for `data-project-slot="1"`, `"2"`, or `"3"` in `index.html`. Replace the title, category, summary, creator credit, status, and expanded project information. Replace the `.hub-project-visual` contents with a real image and meaningful alt text. Add a real project/repository link when available; placeholder link text is not clickable.
+
+The first project is the larger lead feature. Projects two and three sit underneath it.
+
+### Members
+
+Search for `data-member-slot="1"`, `"2"`, or `"3"`. Replace the name, interests, short bio, portrait/avatar, and profile link. Duplicate or remove a whole `article` to change the number of members. No names or biographies have been invented.
+
+Remove the small draft notes and “EDITABLE SLOT” badges when real content is ready.
+
+## Editing and hosting
+
+The hero typography and current purple ribbon are preserved. The page uses standard HTML, CSS, and JavaScript. The existing hero background photo loads from its Unsplash URL; other artwork is CSS or SVG. Native project accordions and all content work without JavaScript.
+
+Webflow and this repository were updated together for this reconstruction. Future edits are not automatically synchronized. GitHub scroll effects are lightweight JavaScript equivalents of the native Webflow interactions.
